@@ -101,6 +101,8 @@ $$$
 ssthresh_{init}>aws = 2Mb, R(t)=1Gbps, cwnd_{init} = 1 segment, RTT=200ms, O(file)=16Mb, segmentSize = 1Kb
 $$$
 
+First, let's calculate number of TCP segments needed for 2MBs, which is 2Mb/1Kb = 2000 segements. Now we know slow start [doubles window size](https://github.com/AbhinavMir/network_grad_notes/blob/main/congestion_control.md#basics-slow-start) till it gets a negative acknowledgement in some form (or till it reaches advertised window size)
+
 (b) How many RTTs does it take to send the file? 
 
 (c) If the time to send the file is given by the number of required RTTs times the RTT value, what is the effective throughput for the transfer? What percentage of the link capacity is utilized?
