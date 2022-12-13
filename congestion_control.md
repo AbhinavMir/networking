@@ -29,7 +29,7 @@ Congestion Control protocols in TCP
 
 Slow start is a congestion control algorithm used in TCP to gradually increase the amount of data that can be sent over a network in order to prevent congestion. The algorithm works by starting with a small congestion window size, and then doubling that size each Round Trip Time (RTT) until it reaches a predetermined maximum. This allows the sender to gradually increase the amount of data it sends, while giving the network time to adjust to the increased load. Once the congestion window reaches the maximum, the sender will use the congestion avoidance algorithm to maintain the current rate of data transmission.
 
-Now explain TCP Reno
+## TCP Reno
 
 TCP Reno is a congestion control algorithm used in TCP to manage network congestion. It is based on the standard TCP algorithm, but with a few modifications. TCP Reno uses the same Slow Start and Congestion Avoidance algorithms as regular TCP, but also implements fast retransmission and fast recovery. Fast retransmission is used to detect and recover from lost packets quickly, while fast recovery allows the sender to increase the congestion window size quickly after a packet loss. This helps to reduce the amount of time needed to recover from packet losses and helps to reduce the overall impact of congestion on the network.
 
