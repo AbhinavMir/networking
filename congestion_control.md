@@ -33,6 +33,10 @@ Congestion Control protocols in TCP
 
 Slow start is a congestion control algorithm used in TCP to gradually increase the amount of data that can be sent over a network in order to prevent congestion. The algorithm works by starting with a small congestion window size, and then doubling that size each Round Trip Time (RTT) until it reaches a predetermined maximum. This allows the sender to gradually increase the amount of data it sends, while giving the network time to adjust to the increased load. Once the congestion window reaches the maximum, the sender will use the congestion avoidance algorithm to maintain the current rate of data transmission.
 
+## Basics: AIMD
+
+AIMD (Additive Increase/Multiplicative Decrease) is a congestion control algorithm used by transport layer protocols such as TCP. The algorithm works by increasing the transmission rate of the sender (additive increase) until a packet loss is detected, which indicates congestion. At this point, the sender decreases the rate (multiplicative decrease) to try and avoid further losses. This process then repeats until the sender finds a rate that allows the packets to be sent without any packet loss. This rate is then the equilibrium rate at which the sender will continue to send packets.
+
 ## How does fast retransmission work?
 
 Fast retransmission is a technique used in TCP to detect and recover from lost packets quickly. It works by having the sender continuously monitor the acknowledgments it receives from the receiver. If the sender does not receive an acknowledgment within a certain time period, it will assume that the packet was lost and retransmit it. This allows the sender to quickly detect and recover from packet losses, reducing the overall impact of congestion on the network.
@@ -50,3 +54,19 @@ where $W_{last}$ is the congestion window size in the last RTT, $W_{max}$ is the
 ### How widely is TCP Reno used?
 
 TCP Reno is widely used as the default congestion control protocol for the Transmission Control Protocol (TCP) in the Internet. It is the most commonly used implementation of the TCP protocol, and is used by the majority of the world's Internet service providers. It is also used by many applications, such as web browsers and file transfer programs, to ensure reliable data transmission over the Internet.
+
+## Sample Question
+
+Consider sending a large file from one host to another over a TCP-Reno connection. Assume that the connection has reached steady state, and its congestion window is now oscillating between 8 and 16 segments in AIMD (without slow start, i.e. a loss event at congestion window = 16 is always detected by triple duplicate acknowledgments). Assume the TCP source is not limited by flow control.
+
+(a) Assuming approximately constant round-trip times (RTT), where RTT = 100ms, in steady state, how long does it take between two consecutive loss events? Assume that it takes roughly one RTT to detect loss.
+
+*Answer*: 
+
+(b) What is the average sending rate for this connection?
+
+*Answer*: The average sending rate for this connection is 12 segments per round trip time (RTT). This is calculated by taking the average of the congestion window size (8 + 16) / 2. Since the congestion window size oscillates between 8 and 16 segments, the average sending rate is 12 segments per RTT.
+
+(c) Now suppose this connection shares the bottleneck link with another long-lived TCP-Reno connection. What would be the average sending rate of each connection? Assume that both connections have the same RTT and are synchronized in their updates of their congestion windows.
+
+*Answer:* 
