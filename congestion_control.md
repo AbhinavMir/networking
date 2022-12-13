@@ -61,7 +61,7 @@ where $W_{last}$ is the congestion window size in the last RTT, $W_{max}$ is the
 
 TCP Reno is widely used as the default congestion control protocol for the Transmission Control Protocol (TCP) in the Internet. It is the most commonly used implementation of the TCP protocol, and is used by the majority of the world's Internet service providers. It is also used by many applications, such as web browsers and file transfer programs, to ensure reliable data transmission over the Internet.
 
-## Sample Question
+#### Sample Question
 
 Consider sending a large file from one host to another over a TCP-Reno connection. Assume that the connection has reached steady state, and its congestion window is now oscillating between 8 and 16 segments in AIMD (without slow start, i.e. a loss event at congestion window = 16 is always detected by triple duplicate acknowledgments). Assume the TCP source is not limited by flow control.
 
@@ -78,3 +78,15 @@ This is because the congestion window is oscillating between 8 and 16 segments. 
 (c) Now suppose this connection shares the bottleneck link with another long-lived TCP-Reno connection. What would be the average sending rate of each connection? Assume that both connections have the same RTT and are synchronized in their updates of their congestion windows.
 
 *Answer:* $\lambda_{1} = \lambda_{2} =120/2 = 60 \text{ segments/s}$
+
+## TCP Tahoe
+
+TCP Tahoe is a congestion control algorithm used in the Transmission Control Protocol (TCP) to regulate the amount of data sent over a network. The algorithm works by monitoring the network for congestion, and then using a set of rules to regulate the flow of data.
+
+The main goal of TCP Tahoe is to prevent congestion on the network by controlling the amount of data sent at any given time. The algorithm works by adjusting the window size of the sender, which is the amount of data that can be sent without waiting for an acknowledgment from the receiver.
+
+The math behind TCP Tahoe involves several parameters that are used to determine the optimal window size. These parameters include the round-trip time (RTT), the packet loss rate, and the throughput. The window size is then calculated using the following formula:
+
+$Window size = min(RTT * throughput, packet loss rate * RTT).$
+
+The window size is then adjusted based on the current network conditions. If the network is congested, the window size is decreased, and if the network is not congested, the window size is increased. This allows TCP Tahoe to regulate the flow of data and prevent network congestion.
