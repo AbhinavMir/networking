@@ -33,6 +33,12 @@ Congestion Control protocols in TCP
 
 Slow start is a congestion control algorithm used in TCP to gradually increase the amount of data that can be sent over a network in order to prevent congestion. The algorithm works by starting with a small congestion window size, and then doubling that size each Round Trip Time (RTT) until it reaches a predetermined maximum. This allows the sender to gradually increase the amount of data it sends, while giving the network time to adjust to the increased load. Once the congestion window reaches the maximum, the sender will use the congestion avoidance algorithm to maintain the current rate of data transmission.
 
+## Basics: CWND (Congestion Window)
+
+Congestion Window (CWND) is a protocol used in networks to control the rate of data transmission between two hosts. It works by setting a maximum window size based on the amount of data that can be sent without overloading the network, and then gradually increasing the window size as more data is sent without experiencing packet loss. This ensures that the network is not overloaded and that data is sent as efficiently as possible. CWND is an important part of network congestion control and is used in protocols such as TCP and UDP.
+
+CWND is halved in the network when a packet is lost or dropped due to congestion. This is a mechanism used to reduce the amount of data sent over the network and to prevent congestion from occurring. When a packet is lost, the congestion window is halved as a means of reducing the amount of data sent in a given time period. This helps to prevent congestion and allows the network to function more efficiently.
+
 ## Basics: AIMD
 
 AIMD (Additive Increase/Multiplicative Decrease) is a congestion control algorithm used by transport layer protocols such as TCP. The algorithm works by increasing the transmission rate of the sender (additive increase) until a packet loss is detected, which indicates congestion. At this point, the sender decreases the rate (multiplicative decrease) to try and avoid further losses. This process then repeats until the sender finds a rate that allows the packets to be sent without any packet loss. This rate is then the equilibrium rate at which the sender will continue to send packets.
