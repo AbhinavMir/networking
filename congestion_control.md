@@ -89,6 +89,22 @@ This is because the congestion window is oscillating between 8 and 16 segments. 
 
 *Answer:* $\lambda_{1} = \lambda_{2} =120/2 = 60 \text{ segments/s}$
 
+### Sample Question
+
+Suppose that you are using an extended version of TCP Reno that allows window sizes much larger than 64K bytes.1 Suppose you are using it over a 1Gbps link with a round-trip time (RTT) of 200ms to transfer 16M-byte file, and the TCP receiver's advertised window is 2M bytes. If TCP sends 1K-byte segments, and assuming no congestion and no lost segments: 
+
+(a) how many RTTs does it take until the sender's congestion window reaches 2M bytes? Recall that the congestion window is initialized to the size of a single segment, and assume that the slow-start threshold is initialized to a value higher than the receiver’s advertised window. 
+
+*Answer:* So basically 
+
+$$$
+ssthresh_{init}>aws = 2Mb, R(t)=1Gbps, cwnd_{init} = 1 segment, RTT=200ms, O(file)=16Mb, segmentSize = 1Kb
+$$$
+
+(b) How many RTTs does it take to send the file? 
+
+(c) If the time to send the file is given by the number of required RTTs times the RTT value, what is the effective throughput for the transfer? What percentage of the link capacity is utilized?
+
 ## TCP Tahoe
 
 TCP Tahoe is a congestion control algorithm used in the Transmission Control Protocol (TCP) to regulate the amount of data sent over a network. The algorithm works by monitoring the network for congestion, and then using a set of rules to regulate the flow of data.
