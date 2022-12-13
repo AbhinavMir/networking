@@ -115,9 +115,11 @@ Using min(k) = 11, we find the answer is 11.
 
 *Answer*: This is even simpler. Basically first the congestion window is flooded by doubling, and then 2Mb  worth of data is sent @ 1Gbps instead of bits and pieces. Typical slow start.
 
-We know 11 RTT till first flood. Earlier, $\sum2^k$ worth of data was sent where $k1=0, k2=11$, so calculating that $2^0 + 2^1.....2^{10}+ 2^{11} = 2047$ segments. 2047*1Kb = 2047 Kbs = 2Mb. Now, 14 Mbs are left. Thus, $dataLeftToSend/ 
+We know 11 RTT till first flood. Earlier, $\sum2^k$ worth of data was sent where $k1=0, k2=11$, so calculating that $2^0 + 2^1.....2^{10}+ 2^{11} = 2047$ segments. 2047*1Kb = 2047 Kbs = 2Mb. Now, 14 Mbs are left. Thus, $dataLeftToSend/aws$ = 14/2 = 7 RTTs. Total, 11+7 = 18 RTTs.
 
 (c) If the time to send the file is given by the number of required RTTs times the RTT value, what is the effective throughput for the transfer? What percentage of the link capacity is utilized?
+
+*Answer*: Throughput = 16MB / (18*200ms) = 35.6 Mbps. Utilization = 35.6M / 1G = 3.56%
 
 ## TCP Tahoe
 
