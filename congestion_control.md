@@ -45,4 +45,8 @@ The congestion window size for TCP Reno is given by the equation:
 
 $W = min(2W_{last}, W_{max}, W_{last}+\alpha \times MSS)$
 
-where W_{last} is the congestion window size in the last RTT, W_{max} is the maximum congestion window size, MSS is the Maximum Segment Size, and \alpha is a scaling factor.
+where $W_{last}$ is the congestion window size in the last RTT, $W_{max}$ is the maximum congestion window size, MSS is the Maximum Segment Size, and $\alpha$ is a scaling factor.
+
+### How widely is TCP Reno used?
+
+TCP Reno is widely used as the default congestion control protocol for the Transmission Control Protocol (TCP) in the Internet. It is the most commonly used implementation of the TCP protocol, and is used by the majority of the world's Internet service providers. It is also used by many applications, such as web browsers and file transfer programs, to ensure reliable data transmission over the Internet.
