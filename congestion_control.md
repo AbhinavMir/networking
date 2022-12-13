@@ -18,16 +18,22 @@ Congestion Control protocols in TCP
 ### Overall categories of congestion control
 
 1. AIMD (Additive Increase Multiplicative Decrease): AIMD is the most commonly used congestion control protocol, and it is the basis of the TCP congestion control algorithm. Additive Increase means that the sender increases its transmission rate by a fixed amount each RTT, while Multiplicative Decrease means that the sender reduces its transmission rate by a fixed factor when it detects congestion. 
-
 2. Window-based Congestion Control: Window-based congestion control protocols use the size of the congestion window as the primary mechanism for controlling the rate of data transmission. This allows the sender to control the rate at which data is sent, depending on the size of the congestion window. 
-
 3. Rate-based Congestion Control: Rate-based congestion control protocols use the rate of data transmission as the primary mechanism for controlling the rate of data transmission. This allows the sender to adjust its transmission rate depending on the current network conditions. 
-
 4. Loss-based Congestion Control: Loss-based congestion control protocols use packet loss as the primary mechanism for controlling the rate of data transmission. This allows the sender to adjust its transmission rate depending on the amount of packet loss that is experienced.
-
 5. Delay-Based Congestion Control: Delay-based congestion control protocols use packet delay as the primary mechanism for controlling the rate of data transmission. This allows the sender to adjust its transmission rate depending on the amount of packet delay that is experienced. 
-
 6. Network-Aware Congestion Control: Network-aware congestion control protocols use information about the network conditions as the primary mechanism for controlling the rate of data transmission. This allows the sender to adjust its transmission rate depending on the overall network conditions.
+
+### Congestion avoidance pseudocode
+
+```c++
+if (cwnd < ssthresh) // if we're still doing
+// slow-start, open window exponentially
+	cwnd += 1
+else // otherwise do Congestion Avoidance
+// linear increase
+	cwnd += 1/cwnd
+```
 
 ## Basics: Slow Start
 
@@ -43,9 +49,13 @@ CWND is halved in the network when a packet is lost or dropped due to congestion
 
 AIMD (Additive Increase/Multiplicative Decrease) is a congestion control algorithm used by transport layer protocols such as TCP. The algorithm works by increasing the transmission rate of the sender (additive increase) until a packet loss is detected, which indicates congestion. At this point, the sender decreases the rate (multiplicative decrease) to try and avoid further losses. This process then repeats until the sender finds a rate that allows the packets to be sent without any packet loss. This rate is then the equilibrium rate at which the sender will continue to send packets.
 
+*In practice*: Increment a little for each ACK Increment = $(MSS * MSS)/CongestionWindow$, $CongestionWindow += Increment$. MSS is Maximum Segment Size.
+
 ## How does fast retransmission work?
 
 Fast retransmission is a technique used in TCP to detect and recover from lost packets quickly. It works by having the sender continuously monitor the acknowledgments it receives from the receiver. If the sender does not receive an acknowledgment within a certain time period, it will assume that the packet was lost and retransmit it. This allows the sender to quickly detect and recover from packet losses, reducing the overall impact of congestion on the network.
+
+By default, 2 ACKs elicit a retransmission, but in some cases, such as fast transmit in some Reno setups need 3 ACKs.
 
 ## TCP Reno
 
