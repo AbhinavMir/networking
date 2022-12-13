@@ -69,4 +69,4 @@ Consider sending a large file from one host to another over a TCP-Reno connectio
 
 (c) Now suppose this connection shares the bottleneck link with another long-lived TCP-Reno connection. What would be the average sending rate of each connection? Assume that both connections have the same RTT and are synchronized in their updates of their congestion windows.
 
-*Answer:* 
+*Answer:* $\lambda_{1} = \lambda_{2} =120/2 = 60 \text{ segments/s}$
