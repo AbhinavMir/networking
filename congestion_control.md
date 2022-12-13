@@ -1,3 +1,7 @@
+## Congestion window size in networks
+
+In computer networking, the congestion window size is a parameter used in network congestion control. It is the maximum amount of data that can be sent over a network connection without receiving an acknowledgment that the data has been received on the other end. The window size is adjusted during the course of data transfers to properly balance the rate at which data is sent and received. This helps to avoid network congestion. The window size is typically adjusted by the sender and is constrained by the size of the network's receive window. The congestion window size is important for ensuring timely data delivery and efficient use of network resources.
+
 Congestion Control protocols in TCP
 
 1. Slow Start
