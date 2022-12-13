@@ -67,7 +67,9 @@ Consider sending a large file from one host to another over a TCP-Reno connectio
 
 (a) Assuming approximately constant round-trip times (RTT), where RTT = 100ms, in steady state, how long does it take between two consecutive loss events? Assume that it takes roughly one RTT to detect loss.
 
-*Answer*: 
+*Answer*: $(16-8+1)*100 = 900 m/s$
+
+This is because the congestion window is oscillating between 8 and 16 segments. Since it takes roughly one RTT to detect loss, it takes 900ms for the congestion window to increase from 8 to 16 segments, and then another RTT to detect the loss.
 
 (b) What is the average sending rate for this connection?
 
