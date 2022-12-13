@@ -37,8 +37,6 @@ TCP Reno is a congestion control algorithm used in TCP to manage network congest
 
 Fast retransmission is a technique used in TCP to detect and recover from lost packets quickly. It works by having the sender continuously monitor the acknowledgments it receives from the receiver. If the sender does not receive an acknowledgment within a certain time period, it will assume that the packet was lost and retransmit it. This allows the sender to quickly detect and recover from packet losses, reducing the overall impact of congestion on the network.
 
-Formulas related to TCP Reno, use LaTex
-
 The congestion window size for TCP Reno is given by the equation: 
 
 $W = min(2W_{last}, W_{max}, W_{last}+\alpha \times MSS)$
