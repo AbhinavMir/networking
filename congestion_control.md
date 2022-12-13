@@ -90,3 +90,16 @@ The math behind TCP Tahoe involves several parameters that are used to determine
 $Window size = min(RTT * throughput, packet loss rate * RTT).$
 
 The window size is then adjusted based on the current network conditions. If the network is congested, the window size is decreased, and if the network is not congested, the window size is increased. This allows TCP Tahoe to regulate the flow of data and prevent network congestion.
+
+#### Sample Question
+
+1. Assume a connection uses TCP Tahoe congestion control. The cwnd in round 1 is 1 KB with the initial ssthresh = 16 KB. The 9th round results in a triple duplicate ACK and the 13th round results in a timeout. Answer the following:
+   1. What is the cwnd in the 7th round?
+   2. What is the cwnd in the 10th round?
+   3. What is the ssthresh in the 11th round?
+   4. What is the cwnd in the 18th round?
+   5. How much data is successfully sent up to and including the 20th round? 
+
+*Answer*: $cwnd=1,initialThreshold=16kb$
+
+{@TODO}
