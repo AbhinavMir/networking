@@ -98,11 +98,14 @@ Distance Vector routing and Next hop routing are two different types of routing 
 
 Policy based routing (PBR) is a type of routing that enables an administrator to create specific rules to determine which route a packet should take in a network. It is often used to override the default routing table and route packets based on the source address, destination address, protocol type, and other criteria. It is used to provide more control over the network traffic, allowing the administrator to prioritize certain types of traffic, improve network performance and security, and provide a high level of resilience. PBR can be used to route a packet based on the type of service, such as the Voice Over IP (VoIP) or streaming video, or to prioritize certain types of traffic, such as those from a particular source IP address or subnet.
 
-**Re: BGP**: Border Gateway Protocol (BGP) is a routing protocol used to route traffic on the Internet. It is the protocol used by Internet Service Providers (ISPs) to exchange information about how to route traffic between their networks. BGP is used to determine the best path for data to travel from one network to another. It is an exterior gateway protocol (EGP) that is used for exchanging routing information between autonomous systems (ASes) on the Internet. BGP is the only protocol used to exchange routing information between different ASes and is a key component of the Internet’s inter-domain routing system.
+**BGP**: Border Gateway Protocol (BGP) is a routing protocol used to route traffic on the Internet. It is the protocol used by Internet Service Providers (ISPs) to exchange information about how to route traffic between their networks. BGP is used to determine the best path for data to travel from one network to another. It is an exterior gateway protocol (EGP) that is used for exchanging routing information between autonomous systems (ASes) on the Internet. BGP is the only protocol used to exchange routing information between different ASes and is a key component of the Internet’s inter-domain routing system.
 
+### Sample Question
 
+![](src/sample_bgp.png)
 
+*Note*: A stub Autonomous System (AS) is an AS that only has one connection to another AS and no external routes. A stub AS typically does not participate in any external routing protocols, and all of its traffic is forwarded to the neighboring AS.
 
+(a) What BGP routes will X advertise to P? (Note: a BGP route specifies a list of ASs on the path.) Provide a one-sentence explanation.
 
-
-
+*Answer*: None, because X is a stub autonomous system.
