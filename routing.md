@@ -35,11 +35,15 @@ Distance-vector routing is a routing protocol that uses a distance vector algori
 
 Routing Information Protocol (RIP) is a distance-vector routing protocol used to find routing paths in IP networks. It works by broadcasting its routing table to all other connected routers at regular intervals. The routers then use this information to dynamically update their routing tables and build the best path to each destination. RIP is a simple and effective routing protocol, but it has some limitations and can cause slow convergence times in large networks.
 
+**Sample Question**
+
+![sample question](src/sample_RIP.png)
+
 ## Next Hop Routing
 
 Next hop routing is a routing technique used in computer networks. It is a method of determining the next network node to which a packet should be forwarded on its way to its destination. In next hop routing, each router determines the optimal next stop on the packet's journey to its destination. This is done by examining the routing table and choosing the best route based on criteria such as the shortest path, the least amount of hops, or the lowest cost. The router then forwards the packet to the next hop, which is the next router in the path.
 
-### Sample Question
+**Sample Question**
 
 ![sample question](src/sample_next_hop.png)
 
