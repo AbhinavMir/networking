@@ -39,7 +39,18 @@ Routing Information Protocol (RIP) is a distance-vector routing protocol used to
 
 ![sample question](src/sample_RIP.png)
 
+*Answer*: We will update three values, two of them because they’re lower cost using J, and 1 because J updated its value.
 
+| Destination | Distance | Next-Hop |
+| ----------- | -------- | -------- |
+| Net 1       | 0        | Direct   |
+| Net 2       | 0        | Direct   |
+| Net 5       | 5        | Router J |
+| Net 17      | 6        | Router M |
+| Net 22      | 9        | Router J |
+| Net 24      | 6        | Router J |
+| Net 30      | 2        | Router Q |
+| Net 42      | 4        | Router J |
 
 ## Next Hop Routing
 
