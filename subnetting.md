@@ -1,5 +1,7 @@
 ## Subnetting
 
+Good to know: [IP Addressing](https://github.com/AbhinavMir/network_grad_notes/blob/main/ip_addr.md)
+
 Subnetting is the process of dividing a single network into multiple smaller networks, or subnets. It is used to break up large networks into more manageable sizes. Subnetting is done to improve network performance, security, and control. Abstraction is a core principle of computer science, subnetting is the Liskov-equivalent of Object Oriented Programming in Networking.
 
 Subnets are created by applying a subnet mask to the IP address of each device on the network. The subnet mask is a 32-bit number that is used to identify which portion of the IP address is the network identifier and which part is the host identifier. The network identifier is used to identify which network a device is on, and the host identifier is used to identify which device on the network it is.
