@@ -53,6 +53,8 @@ Next hop routing is a routing technique used in computer networks. It is a metho
 
 ### Sample Question
 
+![sample question](src/sample_next_hop.png)
+
 
 
 ## D-V routing vs NH Routing
