@@ -113,3 +113,12 @@ Policy based routing (PBR) is a type of routing that enables an administrator to
 (b) Suppose that P, Q, and R have CIDR address allocations C1.0.0.0/8, C2.0.0.0/8, and C3.0.0.0/8 (using hexadecimal dotted notation with mask), respectively. Using provider-based address allocation, W is assigned C1.A3.0.0/16, X is assigned C1.B0.0.0/12 from P’s address space, and Y is assigned C2.0A.10.0/20. Use the CIDR longest prefix match rule to give the routing table for a router in Q. Assume that entries have addresses that are aggregated as much as possible
 
 *Note*: The Longest Prefix Match (LPM) rule is used by IP routers to determine which route to select when there are multiple routes available from a routing table. It works by selecting the route whose destination address matches with the longest prefix of the destination IP address. For example, let's say a router has two routes in its routing table, 10.0.0.0/24 and 10.0.0.0/16. If a packet arrives with a destination IP address of 10.0.3.4, then the longest prefix match rule will select the route 10.0.0.0/16 since it has a longer prefix than the other route.
+
+For this question, note down the P, R, Q and W, X, Y [CIDRs](./ip_addr.md) for ease of accessibility.
+
+P - C1.0.0.0/8, Q - C2.0.0.0/8, R - C3.0.0.0/8 and W - C1.A3.0.0/16, X - C1.B0.0.0/12, Y - C2.0A.10.0/20
+
+We have to make a table from the perspective of Q reaching every other AS (P, R, W, X, Y) in the table below.
+
+![](src/table_BGP.png)
+
