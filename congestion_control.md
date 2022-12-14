@@ -162,4 +162,6 @@ TCP fairness is to ensure that all applications and users receive a fair share o
 
 ### Futher reading
 
+This file covers basics of congestion avoidance, for more advanced methods, refer to this section.
+
 1. [Congestion Avoidance and Control](https://www.cs.bu.edu/faculty/matta/Teaching/cs655-papers/p314-jacobson.pdf) by Van Jaconson
