@@ -49,7 +49,7 @@ Next hop routing is a routing technique used in computer networks. It is a metho
 
 First, make a routing table for A. Select the lowest cost path from A.
 
-Once selected, in this case D, map the path from node N to D, and add the cost to A. Thus the routing table looks like this.
+Once selected, in this case D, map the path from node N to D, and add the cost to cost(AD). Thus the routing table looks like this.
 
 **Routing table for Node A**
 
@@ -64,7 +64,25 @@ Once selected, in this case D, map the path from node N to D, and add the cost t
 
 **Routing table for Node B**
 
+| Destination | Next-Hop | Cost |
+| --- | --- | --- |
+| A | E | 7 |
+| B | - | 0 |
+| C | E | 3 |
+| D | E | 4 |
+| E | E | 2 |
+| F | E | 9 |
 
+**Routing table for Node C**
+
+| Destination | Next-Hop | Cost |
+| --- | --- | --- |
+| A | E | 6 |
+| B | E | 3 |
+| C | - | 0 |
+| D | E | 3 |
+| E | E | 1 |
+| F | F | 6 |
 
 ## D-V routing vs NH Routing
 
