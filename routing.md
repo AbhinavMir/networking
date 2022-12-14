@@ -1,6 +1,17 @@
 ## What is routing in networking? 
 
-Routing is the process of selecting paths in a network along which to send network data. Routers create an overlay network by using the routing information exchanged via routing protocols. This information is used to construct a logical map of the network, which can then be used to determine the best path for data to travel from its source to its destination.
+Routing is the process of selecting paths in a network along which to send network data. Routers create an overlay network by using the routing information exchanged via routing protocols. This information is used to construct a logical map of the network, which can then be used to determine the best path for data to travel from its source to its destination. There are many routing protocols, we’ll discuss RIP, BGPs.
+
+1. Open Shortest Path First (OSPF)
+2. Border Gateway Protocol (BGP)
+3. Enhanced Interior Gateway Routing Protocol (EIGRP)
+4. Routing Information Protocol (RIP)
+5. Intermediate System to Intermediate System (IS-IS)
+6. Wireless Routing Protocol (WRP)
+7. Multi-Protocol Label Switching (MPLS)
+8. Path Vector Routing Protocol (PVRP)
+9. Dynamic Source Routing (DSR)
+10. Ad Hoc On-Demand Distance Vector (AODV)
 
 ### Reviewing old topics
 
@@ -11,6 +22,10 @@ Routing is the process of selecting paths in a network along which to send netwo
 Distance-vector routing is a routing protocol that uses a distance vector algorithm to determine the best path for a packet to traverse through a network. A distance vector algorithm calculates the distance (in hops) between the source node and all other nodes in the network. Each node then updates its own routing table to reflect the distances between itself and all other nodes.
 
 **Loops**: Main issue with distance-vector routing is that it can cause routing loops. A routing loop occurs when two or more nodes have incorrect information in their routing tables, causing them to continuously route packets back and forth between each other without ever reaching their intended destination. This results in wasted bandwidth and can lead to network congestion. To prevent routing loops, distance-vector routing protocols use a variety of techniques such as split horizon, route poisoning, and triggered updates.
+
+## Routing Information Protocol
+
+Routing Information Protocol (RIP) is a distance-vector routing protocol used to find routing paths in IP networks. It works by broadcasting its routing table to all other connected routers at regular intervals. The routers then use this information to dynamically update their routing tables and build the best path to each destination. RIP is a simple and effective routing protocol, but it has some limitations and can cause slow convergence times in large networks.
 
 ## Next Hop Routing
 
@@ -23,4 +38,10 @@ Next hop routing is a routing technique used in computer networks. It is a metho
 ## D-V routing vs NH Routing
 
 Distance Vector routing and Next hop routing are two different types of routing protocols. Distance Vector routing (also known as Bellman-Ford or RIP) is a routing protocol that uses the distance to a destination to determine the best path to take. It sends information about a network's topology to its neighbors, who then use the information to update their own routing tables. Next hop routing is a more efficient routing protocol that sends packets directly to their destination without waiting for information from its neighbors. It uses the concept of a next hop address to determine the best path to take. It is often used in large networks because of its speed and efficiency.
+
+## Policy Based Routing
+
+Policy based routing (PBR) is a type of routing that enables an administrator to create specific rules to determine which route a packet should take in a network. It is often used to override the default routing table and route packets based on the source address, destination address, protocol type, and other criteria. It is used to provide more control over the network traffic, allowing the administrator to prioritize certain types of traffic, improve network performance and security, and provide a high level of resilience. PBR can be used to route a packet based on the type of service, such as the Voice Over IP (VoIP) or streaming video, or to prioritize certain types of traffic, such as those from a particular source IP address or subnet.
+
+**Re: BGP**: Border Gateway Protocol (BGP) is a routing protocol used to route traffic on the Internet. It is the protocol used by Internet Service Providers (ISPs) to exchange information about how to route traffic between their networks. BGP is used to determine the best path for data to travel from one network to another. It is an exterior gateway protocol (EGP) that is used for exchanging routing information between autonomous systems (ASes) on the Internet. BGP is the only protocol used to exchange routing information between different ASes and is a key component of the Internet’s inter-domain routing system.
 
