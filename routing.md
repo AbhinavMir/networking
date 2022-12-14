@@ -108,4 +108,6 @@ Policy based routing (PBR) is a type of routing that enables an administrator to
 
 (a) What BGP routes will X advertise to P? (Note: a BGP route specifies a list of ASs on the path.) Provide a one-sentence explanation.
 
-*Answer*: None, because X is a stub autonomous system.
+*Answer*: None, because X is a stub autonomous system. Stub systems typically do not advertise routing or forwarding tables to their neighbors. Instead, they rely on their single connection to the neighboring AS for all of their routing needs. Stub ASes are useful for organizations that have only one connection to the Internet and do not need to manage complex routing protocols or maintain large routing tables. By using a stub AS, these organizations can simplify their network and reduce their operational costs.
+
+(b) Suppose that P, Q, and R have CIDR address allocations C1.0.0.0/8, C2.0.0.0/8, and C3.0.0.0/8 (using hexadecimal dotted notation with mask), respectively. Using provider-based address allocation, W is assigned C1.A3.0.0/16, X is assigned C1.B0.0.0/12 from P’s address space, and Y is assigned C2.0A.10.0/20. Use the CIDR longest prefix match rule to give the routing table for a router in Q. Assume that entries have addresses that are aggregated as much as possible
