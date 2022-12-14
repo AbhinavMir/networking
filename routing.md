@@ -39,6 +39,18 @@ Routing Information Protocol (RIP) is a distance-vector routing protocol used to
 
 Next hop routing is a routing technique used in computer networks. It is a method of determining the next network node to which a packet should be forwarded on its way to its destination. In next hop routing, each router determines the optimal next stop on the packet's journey to its destination. This is done by examining the routing table and choosing the best route based on criteria such as the shortest path, the least amount of hops, or the lowest cost. The router then forwards the packet to the next hop, which is the next router in the path.
 
+### How to make a table
+
+1. Gather the necessary information: Identify the source IP address and the destination IP address, as well as the IP addresses and MAC addresses of the devices in your network.
+
+2. Create the table: Create a table with four columns: source IP address, destination IP address, next hop IP address, and MAC address.
+
+3. Populate the table: Populate the table with the source IP address, destination IP address, and the IP address of the next hop router or switch.
+
+4. Set the MAC address: To ensure that the next hop router or switch will receive the packet, set the MAC address of the device in the last column.
+
+5. Test the table: Test the table by sending packets from the source IP address to the destination IP address. If the packet is successfully sent, then the table is complete.
+
 ### Sample Question
 
 
