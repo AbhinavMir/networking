@@ -159,3 +159,7 @@ TCP fairness is to ensure that all applications and users receive a fair share o
 2. **Leaky Bucket Algorithm**: This algorithm works by controlling the rate of data transmission between two hosts by assigning a leaky bucket to each host. The bucket contains a certain amount of data, which can be used to send data. When data is sent, it is removed from the bucket and the bucket is refilled at a certain rate. The rate at which the buckets are refilled is determined by the bandwidth allocated to each host.
 
 3. **Fair Queueing**: This algorithm works by controlling the rate of data transmission between two hosts by assigning a queue to each host. The queue is used to store data that is waiting to be sent. The algorithm ensures that data is sent at a fair rate by ensuring that each host sends data at the same rate. This ensures that each host receives an equal
+
+### Futher reading
+
+1. [Congestion Avoidance and Control](https://www.cs.bu.edu/faculty/matta/Teaching/cs655-papers/p314-jacobson.pdf) by Van Jaconson

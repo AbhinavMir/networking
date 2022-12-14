@@ -29,3 +29,4 @@ In the Ethernet protocol, bit-oriented framing is used to send data over a netwo
 ## What is a Shared LANs (Multiple-Access Links)
 
 A shared LAN (local area network) is a type of network that allows multiple devices to connect to the same network. In this type of network, each device has access to all of the resources on the network, such as files, printers, and Internet access. The most common type of shared LAN is an Ethernet network, which uses a twisted-pair cable to connect devices. Shared LANs are used in offices and homes, as well as for larger networks, such as those that provide Internet access.
+
