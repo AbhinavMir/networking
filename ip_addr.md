@@ -1,6 +1,6 @@
  ## CIDR 
 
-> IP is typically 4 bytes (32 bits) long for IPv4, or 16 bytes (128 bits) long for IPv6. These sizes allow for a maximum of 4,294,967,296 (2^32) unique IP addresses for IPv4
+> An IP (Internet Protocol) address consists of 32 bits and is typically represented as four sets of numbers separated by a period. For example, an IPv4 address may look like 192.168.0.1. Each of the four octets (groups of eight bits) represents a number ranging from 0 - 255, resulting in a total of 32 bits. The full representation of an IP with 32 bits would be a four-part numerical address, such as 192.168.0.1.
 
 CIDR (Classless Inter-Domain Routing) is a way of allocating IP addresses that divides an IP address into two components: the network address and the host address. This allows for more efficient use of IP addresses as it allows for a single network address to be allocated to multiple hosts, allowing for more efficient use of IP address space.
 
