@@ -28,4 +28,12 @@ Subnets can also be divided up into “sub-subnets”, which are further divisio
 
 (b) Subnet “A” CIDR address range
 
-*Answer*: 19 addresses is >2^4, but less than 2^5, so we reserve 2^5. If you $32-log_2{2^5}=27$, you get the CIDR, because now you subnet mask over first 27 bits, and you have (reasonable) free reign over the last 5 addresses. 
+*Answer*: 19 addresses is >2^4, but less than 2^5, so we reserve 2^5. If you $32-log_2{2^5}=27$, you get the CIDR, because now you subnet mask over first 27 bits, and you have (reasonable) free reign over the last 5 addresses. So the answer is `x.y.z.0/27` 
+
+(c) Subnet “B” CIDR address range
+
+*Answer*: Since A CIDR has taken over `x.y.z.0/27` , we can allocate `x.y.z.32/27` 
+
+(d) Subnet “C” CIDR address range: `x.y.z.64/27` ~ subnet “D” will be `x.y.z.96/27`
+
+(e) Subnet “E” CIDR address range: Since subnet E connects only R1 and R2, we need only two useable IPs here so we can just allocate from A’s address space. `x.y.z.0/31`.
