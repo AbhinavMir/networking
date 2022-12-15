@@ -1,1 +1,2 @@
 In **routing**, mention destination, next hop, cost and CIDR (if asked). In **BGP**: From perspective of mentioned node, mention how every part of network can be reached. Make table on basis of that. In **DV routing of WAN**, routing congestion = (totalLinks-1)(duplex)(number of switches)(bit storage number). In next hop routing, if required for P, Q, R, consider routing to _all_ destinations, and add take shortest route from source to destination, and add the cost between source and lowest cost next neighbour.
+In **Congestion Control**: **Slow start** - sending small
