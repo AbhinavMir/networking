@@ -8,8 +8,8 @@ Datagrams in IP are packets of data used by the Internet Protocol (IP) to send d
 
 **Fields of a datagram**
 
-1. Version: The version of IP being used.
-2. Header Length: The length of the header in 32-bit words.
+1. Version: The version of IP being used. 4 is IPv4.
+2. Header Length: The length of the header in 32-bit words. 
 3. Type of Service: The type of service requested for the datagram.
 4. Total Length: The total length of the datagram in bytes.
 5. Identification: A unique number that identifies the datagram.
@@ -20,6 +20,8 @@ Datagrams in IP are packets of data used by the Internet Protocol (IP) to send d
 10. Header Checksum: A checksum
 
 ![IP datagram](http://www.tcpipguide.com/free/diagrams/ipformat.png)
+
+The fragment offset is a field in the IP header used to indicate the offset of a particular fragment, relative to the beginning of the original unfragmented IP datagram. It is 13 bits in length and is expressed in 8-byte (64 bit) units. This means that the maximum possible offset is 8191 bytes.
 
 ## CIDR
 

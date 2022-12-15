@@ -1,2 +1,6 @@
 In **routing**, mention destination, next hop, cost and CIDR (if asked). In **BGP**: From perspective of mentioned node, mention how every part of network can be reached. Make table on basis of that. In **DV routing of WAN**, routing congestion = (totalLinks-1)(duplex)(number of switches)(bit storage number). In next hop routing, if required for P, Q, R, consider routing to _all_ destinations, and add take shortest route from source to destination, and add the cost between source and lowest cost next neighbour.
 In **Congestion Control**: **Slow start** - sending small
+
+
+
+In **subnetting**:`255.255.255.0` means the range can be 192.168.1.0-192.168.1.255, but total usable addresses are 256-3=253, the 3 addresses reserved are .0 (network addr), .1 (default addr) and .255 (broadcast addr). 8 bits = 1 byte. Each IP is 32 bits, 4 bytes. Convert all octets to binary representation incase too confused. To convert to binary use $2^{128}, 2^{64}, 2^{32}, 2^{16}, 2^{8}, 2^4, 2^0$ trick. To find **range from subnet mask**, convert subnet mask and network to binaries, and match. Where both 1, keep 1, otherwise 0. To turn CIDR into subnet mask and IP, turn the IP to binary, count from 0 till CIDR number (`/number`), keep that 1, rest 0 - that’s your subnet mask.

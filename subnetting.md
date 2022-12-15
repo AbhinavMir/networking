@@ -17,3 +17,13 @@ Subnets can also be divided up into “sub-subnets”, which are further divisio
 1. An office network with the IP address range of `192.168.1.1`-`192.168.1.255` could be subnetted into four smaller networks, each with a range of `192.168.1.1`-`192.168.1.63`, `192.168.1.64`-`192.168.1.127`, `192.168.1.128`-`192.168.1.191`, and `192.168.1.192`-`192.168.1.255`.
 
 2. A network with the IP address range of `10.10.1.1`-`10.10.255.255` could be subnetted into four subnets, each with a range of `10.10.1.1`-`10.10.31.255`, `10.10.32.1`-`10.10.63.255`, `10.10.64.1`-`10.10.95.255` and `10.10.96.1`-`10.10.127.255`.
+
+## Sample Question
+
+![](src/ip_addr_eg.png)
+
+(a) What is the aggregated CIDR address?
+
+*Answer*: Since there are 4 subnets between A to D, each having 19 hosts, we have 4*19 = 76 addresses, but R2 and R1 also reserve addresses, so 78. $2^6 = 64$ and $2^7 = 128$, so we take max(2^n) > number of addresses. $log_2128$ = 7 bits. This gives you the number of bits required to represent the number of addresses. For example, if the number of addresses is 256, the answer would be 8, since $2^8 = 256$. Once we have number of bits, we know we now need to reserve 
+
+(b) Subnet “A” CIDR address range
