@@ -1,0 +1,3 @@
+Not sure where to put these yet.
+
+- OpenFlow is a protocol that enables the creation of software defined networks (SDN). SDN is an approach to network architecture that enables network administrators to centrally manage network functions. It allows them to set up paths for data to travel across the network and prioritize traffic. OpenFlow is a protocol that enables the exchange of information between the SDN controller and the network devices (switches, routers, etc.). It allows the controller to set up forwarding rules on the network devices, which define how network traffic should be routed. This allows the controller to control how the network functions, and make changes quickly and easily.

@@ -10,7 +10,11 @@ Subnets are usually divided up into “classes”, with each class having a diff
 
 Subnets can also be divided up into “sub-subnets”, which are further divisions of the original subnet. Sub-subnetting allows for even finer control over the network. It’s not in the scope of discussion for this repository.
 
+Conclusion: **Converting Host bits to Network bits**
+
 **Supernetting** is not a topic we will go in details of, but supernetting is a method of aggregating multiple network address prefixes into a single, larger prefix. It is used to simplify the routing and management of large networks by providing a single route advertisement to a provider's network. Supernetting is also known as Classless Inter-Domain Routing (CIDR). This is because it eliminates the use of the traditional IP class system for routing. Supernetting allows for more efficient use of IP address space, as it allows for multiple networks to be grouped together under one larger address.
+
+Conclusion: **Converting Network bits to Host bits**
 
 ## Example of Subnetting: In an office
 
@@ -37,3 +41,8 @@ Subnets can also be divided up into “sub-subnets”, which are further divisio
 (d) Subnet “C” CIDR address range: `x.y.z.64/27` ~ subnet “D” will be `x.y.z.96/27`
 
 (e) Subnet “E” CIDR address range: Since subnet E connects only R1 and R2, we need only two useable IPs here so we can just allocate from A’s address space. `x.y.z.0/31`.
+
+## Further Reading
+
+1. [Introduction to supernetting](https://www.youtube.com/watch?v=m7TwQ24lF74)
+2. 
