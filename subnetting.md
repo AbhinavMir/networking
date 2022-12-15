@@ -24,6 +24,8 @@ Subnets can also be divided up into “sub-subnets”, which are further divisio
 
 (a) What is the aggregated CIDR address?
 
-*Answer*: Since there are 4 subnets between A to D, each having 19 hosts, we have 4*19 = 76 addresses, but R2 and R1 also reserve addresses, so 78. $2^6 = 64$ and $2^7 = 128$, so we take max(2^n) > number of addresses. $log_2128$ = 7 bits. This gives you the number of bits required to represent the number of addresses. For example, if the number of addresses is 256, the answer would be 8, since $2^8 = 256$. Once we have number of bits, we know we now need to reserve 
+*Answer*: Since there are 4 subnets between A to D, each having 19 hosts, we have 4*19 = 76 addresses, but R2 and R1 also reserve addresses, so 78. $2^6 = 64$ and $2^7 = 128$, so we take max(2^n) > number of addresses. $log_2128$ = 7 bits. This gives you the number of bits required to represent the number of addresses. For example, if the number of addresses is 256, the answer would be 8, since $2^8 = 256$. Once we have number of bits, we know we now need to reserve, which is (32-7) = 25 bits CIDR. So `x.y.z.0/25`
 
 (b) Subnet “A” CIDR address range
+
+*Answer*: 19 addresses is >2^4, but less than 2^5, so we reserve 2^5. If you $32-log_2{2^5}=27$, you get the CIDR, because now you subnet mask over first 27 bits, and you have (reasonable) free reign over the last 5 addresses. 

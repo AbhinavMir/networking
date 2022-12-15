@@ -1,6 +1,6 @@
 ## README
 
-This repository is based on CS655 taught at Boston University and some basics from my undergrad Networking course @ VIT under Prof. Arunkumar Thangavelu. No guarentee re: CCNA and other certs. 
+This repository is based on CS655 taught at Boston University and some basics from my undergrad Networking course @ VIT under Prof. Arunkumar Thangavelu. No guarentee re: CCNA and other certs. I use OpenAI’s GPT3 to expand upon ideas.
 
 ### Index
 
