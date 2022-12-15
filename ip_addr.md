@@ -1,6 +1,27 @@
- ## CIDR 
+## IP Addressing 
 
-> An IP (Internet Protocol) address consists of 32 bits and is typically represented as four sets of numbers separated by a period. For example, an IPv4 address may look like 192.168.0.1. Each of the four octets (groups of eight bits) represents a number ranging from 0 - 255, resulting in a total of 32 bits. The full representation of an IP with 32 bits would be a four-part numerical address, such as 192.168.0.1.
+An IP (Internet Protocol) address consists of 32 bits and is typically represented as four sets of numbers separated by a period. For example, an IPv4 address may look like 192.168.0.1. Each of the four octets (groups of eight bits) represents a number ranging from 0 - 255, resulting in a total of 32 bits. The full representation of an IP with 32 bits would be a four-part numerical address, such as 192.168.0.1.
+
+## Datagrams in IP
+
+Datagrams in IP are packets of data used by the Internet Protocol (IP) to send data from one node to another. An IP datagram contains header information that describes the source and destination of the data, as well as a payload of data. The data is then fragmented into a series of smaller datagrams if it is too large to fit into a single packet. IP datagrams are routed through the internet using routers, which forward them to their destination.
+
+**Fields of a datagram**
+
+1. Version: The version of IP being used.
+2. Header Length: The length of the header in 32-bit words.
+3. Type of Service: The type of service requested for the datagram.
+4. Total Length: The total length of the datagram in bytes.
+5. Identification: A unique number that identifies the datagram.
+6. Flags: Control flags used for fragmentation.
+7. Fragment Offset: The offset of the fragment from the start of the original datagram.
+8. Time to Live: The maximum number of hops that this datagram can take.
+9. Protocol: The protocol used in the payload.
+10. Header Checksum: A checksum
+
+![IP datagram](http://www.tcpipguide.com/free/diagrams/ipformat.png)
+
+## CIDR
 
 CIDR (Classless Inter-Domain Routing) is a way of allocating IP addresses that divides an IP address into two components: the network address and the host address. This allows for more efficient use of IP addresses as it allows for a single network address to be allocated to multiple hosts, allowing for more efficient use of IP address space.
 
