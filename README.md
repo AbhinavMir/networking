@@ -1,6 +1,6 @@
 ## README
 
-This repository is based on CS655 taught at Boston University and some basics from my undergrad Networking course @ VIT under Prof. Arunkumar Thangavelu. No guarentee re: CCNA and other certs. I use OpenAI’s GPT3 to expand upon ideas. Prof. Matta has scattered notes on everything and his classes are a little to big to pay attention in the morning, thus thought it best to put it all together in one place. Went from scratch to this in a couple days with the power of YouTube and AI, so there will be mistakes, please use the issues tab! 
+This repository is based on CS655 taught at Boston University and some basics from my undergrad Networking course @ VIT under Prof. Arunkumar Thangavelu. No guarentee re: CCNA and other certs. I use OpenAI’s GPT3 to expand upon ideas. Prof. Matta has scattered notes on everything and his classes are a little to big to pay attention in the morning, thus thought it best to put it all together in one place. Went from scratch to this in a couple days with the power of YouTube and AI, so there will be mistakes, please use the issues tab! I had help from excellent friends, shoutout @prateekdceit06, Haniel and Finn :)
 
 [Broken links will be fixed soon]
 
