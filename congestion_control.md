@@ -125,6 +125,16 @@ We know 11 RTT till first flood. Earlier, $\sum2^k$ worth of data was sent where
 
 *Answer*: Throughput = 16MB / (18*200ms) = 35.6 Mbps. Utilization = 35.6M / 1G = 3.56%
 
+## Sample question
+
+ Consider that only a single TCP (Reno) connection uses one 10Mbps link which does not buffer any data. Suppose that this link is the only congested link between the sending and receiving hosts. Assume that the TCP sender has a huge file to send to the receiver, and the receiver’s receive buffer is much larger than the congestion window. We also make the following assumptions: each TCP segment size is 1,500 bytes; the two-way propagation delay of this connection is 150 msec; and this TCP connection is always in congestion avoidance phase, that is, ignore slow start. 
+
+a. What is the maximum window size (in segments) that this TCP connection can achieve? 
+
+b. What is the average window size (in segments) and average throughput (in bps) of this TCP connection? 
+
+c. How long would it take for this TCP connection to reach its maximum window again after recovering from a packet loss?
+
 ## TCP Tahoe
 
 TCP Tahoe is a congestion control algorithm used in the Transmission Control Protocol (TCP) to regulate the amount of data sent over a network. The algorithm works by monitoring the network for congestion, and then using a set of rules to regulate the flow of data.
