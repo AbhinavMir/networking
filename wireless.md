@@ -16,20 +16,16 @@ Switch ->> DHCP server: Broadcast (3)
 Switch ->> Router R: Broadcast (4)
 ```
 
-When DHCP replies and allocates you IP, it also gives you IP of the router. This device has router’s IP address, but not MAC address, so for that we need to use ARP.
+ARP (Broadcast): When DHCP replies and allocates you IP, it also gives you IP of the router. This device has router’s IP address, but not MAC address, so for that we need to use ARP. This will be along all the links.
 
-```mermaid
-sequenceDiagram
-X ->> Access Point: Broadcast (1)
-Access Point->> Switch: Broadcast (2)
-Switch ->> DHCP server: Broadcast (3)
-Switch ->> Router R: Broadcast (4)
-```
+ARP (Reply): Now the router knows how to reach the device X directly, which is via R-S, S-AP, AP-X thus only 3 frames emitted.
+
+Now finally, we have to consider the TCP 3 way handshake between X and B. We have to calculate the frames emitted in this network, thus we won’t calculate for R-B.
 
 
-| higher layer protocol/data | number of frames transmitted | Links                   |
-| -------------------------- | ---------------------------- | ----------------------- |
-| DHCP 4 message broadcast   | 4*4 = 16 frames              | X-AP, AP-S, S-DHCP, S-R |
-| ARP (Address resolution)   | 4 frames                     | ----------------------- |
-| DHCP 4 message broadcast   | 4*4 = 16 frames              | X-AP, AP-S, S-DHCP, S-R |
-
+| higher layer protocol/data | number of frames transmitted | Links                                                  |
+| -------------------------- | ---------------------------- | ------------------------------------------------------ |
+| DHCP 4 message broadcast   | 4*4 = 16 frames              | X-AP, AP-S, S-DHCP, S-R                                |
+| ARP (broadcast)            | 4 frames                     | X-AP, AP-S, S-DHCP, S-R                                |
+| ARP (reply)                | 3 frames                     | R-S, S-AP, AP-X                                        |
+| TCP 3-way handshake        | 3*(3 frames) = 9 frames      | X-AP, AP-S, S-R, R-B (3 way, so add links accordingly) |
