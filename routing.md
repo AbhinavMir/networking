@@ -133,3 +133,4 @@ We have to make a table from the perspective of Q reaching every other AS (P, R,
 
 ![](src/table_BGP.png)
 
+**NOTE**: There’s an error in my answer, I put c1 everywhere, use c1,c2,c3.

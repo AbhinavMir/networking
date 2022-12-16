@@ -6,5 +6,5 @@ In **subnetting**:`255.255.255.0` means the range can be 192.168.1.0-192.168.1.2
 
 **Data Link Layer:** The two sublayers are the Logical Link Control (LLC) sublayer and the Media Access Control (MAC) sublayer. The LLC sublayer is responsible for providing an interface between the network layer and the MAC sublayer. It implements a number of functions including error control, frame sequencing, and flow control. The MAC sublayer is responsible for controlling access to the shared communication media. It implements the medium access control protocol and provides the means for devices to communicate over the network. **ARP** is **address resolution protocol**. 
 
-1Byte=8bit. **Bandwidth Delay product** = bandwidth or capacity * Delay or RTT. In GBN, 
+1Byte=8bit. **Bandwidth Delay product** = bandwidth or capacity * Delay or RTT. Number of bits needed to represent the sequence number = $log_2(SWS+RWS)$. S&W: SWS=RWS=1, GBN:RWS =1,SR: SWS=RWS. SR gives us highest amount of control, SW lowest. 
 
