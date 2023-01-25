@@ -16,8 +16,8 @@ This repository is based on CS655 taught at Boston University and some basics fr
 
 **what's done** - just click around for a bit tbh, I am yet to index everything that was done b/c I am lazy like that. 
 1. [Congestion control](https://github.com/AbhinavMir/network_grad_notes/blob/main/congestion_control.md)
-2. ....
-n. ....
+.<br>.<br>.<br>.<br>
+n. something something ARP
 
 
 ## General further reading
